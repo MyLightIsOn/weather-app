@@ -9,6 +9,7 @@ import {TodayComponent} from './today/today.component';
 import {ForecastComponent} from './forecast/forecast.component';
 import {RadarComponent} from './radar/radar.component';
 import {CitiesComponent} from './cities/cities.component';
+import {WeatherDataService} from "./weather-data.service";
 
 const appRoutes: Routes = [
     {path: '', component: TodayComponent},
@@ -32,7 +33,9 @@ const appRoutes: Routes = [
         HttpModule,
         RouterModule.forRoot(appRoutes)
     ],
-    providers: [],
+    providers: [
+        WeatherDataService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
