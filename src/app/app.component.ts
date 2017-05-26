@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     }
 
     getWeather() {
-        this.weatherDataService.getWeather()
+        this.weatherDataService.getWeather('London,uk')
             .subscribe(
                 weather => this.weather = weather
             );

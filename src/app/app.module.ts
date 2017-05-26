@@ -9,7 +9,7 @@ import {TodayComponent} from './today/today.component';
 import {ForecastComponent} from './forecast/forecast.component';
 import {RadarComponent} from './radar/radar.component';
 import {CitiesComponent} from './cities/cities.component';
-import {WeatherDataService} from "./weather-data.service";
+import {weatherApiInjectables} from './weather-api.injectables';
 
 const appRoutes: Routes = [
     {path: '', component: TodayComponent},
@@ -34,7 +34,7 @@ const appRoutes: Routes = [
         RouterModule.forRoot(appRoutes)
     ],
     providers: [
-        WeatherDataService
+        weatherApiInjectables
     ],
     bootstrap: [AppComponent]
 })
